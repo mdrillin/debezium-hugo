@@ -1,0 +1,76 @@
+<head>
+  <meta charset="utf-8">
+  <title>{{ .Title }}</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  {{ hugo.Generator }}
+  <meta content="" name="description"> 
+  <meta content="Debezium" name="author">
+  
+  {{ "<!-- ** CSS Plugins Needed for the Project ** -->" | safeHTML }}
+  
+  {{ "<!-- Bootstrap -->" | safeHTML }}
+  <link rel="stylesheet" href="{{ `plugins/bootstrap/bootstrap-community.min.css` | absURL }}">
+
+  {{ "<!--Favicon-->" | safeHTML }}
+  <link rel="icon" href="{{ `images/favicon.png` | absURL }}" type="image/x-icon">
+
+  {{ "<!-- highlight.js -->" | safeHTML }}
+  <link rel="stylesheet" href="{{ `plugins/highlight/default.min.css` | absURL }}">
+
+  {{ "<!-- fonts -->" | safeHTML }}
+  <link href="https://fonts.googleapis.com/css?family={{replace .Site.Params.font_family ' ' '+' | title}}:300,400,700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+  
+  <style>
+  :root{
+    --primary-color:{{ .Site.Params.primary_color }};
+    --body-color:{{ .Site.Params.body_color }};
+    --text-color:{{ .Site.Params.text_color }};
+    --text-color-dark:{{ .Site.Params.text_color_dark }};
+    --white-color:{{ .Site.Params.white_color }};
+    --light-color:{{ .Site.Params.light_color }};
+    --font-family:{{ replace .Site.Params.font_family ' ' '+' | title }};
+  }
+/* adjusting the vertical spacing for when a stickynav is engaged */
+.breadcrumb-fixed > .active {
+    color: #8c8f91;
+  }
+  .breadcrumb-fixed {
+    margin: 70px 0 10px;
+    padding: 8px 15px;
+    margin-bottom: 20px;
+    list-style: none;
+    background-color: #f5f5f5;
+    border-radius: 4px;
+  }
+
+  .breadcrumb-fixed > li {
+    display: inline-block;
+  }
+  </style>
+
+{{ "<!-- Main Stylesheet -->" | safeHTML }}
+{{ $css := resources.Get "css/style.css" | minify }}
+<link href="{{ $css.Permalink }}" rel="stylesheet" media="screen"/>
+  
+{{ "<!-- ** JS Plugins Needed for the Project ** -->" | safeHTML }}
+
+{{ "<!-- jquiry -->" | safeHTML }}
+<script src="{{ `plugins/jquery/jquery-1.12.4.js` | absURL }}"></script>
+
+{{ "<!-- Bootstrap JS -->" | safeHTML }}
+<script src="{{ `plugins/bootstrap/bootstrap-community.min.js` | absURL }}"></script>
+
+{{ "<!-- highlight.js -->" | safeHTML }}
+<script src="{{ `plugins/highlight/highlight.min.js` | absURL }}"></script>
+<script> hljs.initHighlightingOnLoad(); </script>
+
+{{ template "_internal/google_analytics.html" . }}
+  
+{{ if templates.Exists ( printf "partials/overrides/header.html" ) }}
+  {{ partial "partials/overrides/header.html" . }}
+{{ else }}
+  {{ "<!-- create /layouts/partials/overrides/header.html in your own theme or root directory to add your custom content here -->" | safeHTML }}
+{{ end }}
+
+</head>

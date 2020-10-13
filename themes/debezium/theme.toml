@@ -1,0 +1,12 @@
+name = "debezium"
+license = "Apache-2.0"
+licenselink = "https://github.com/debezium/debezium.github.io/blob/develop/README.md"
+description = "Debezium, A documentation theme powered by hugo"
+homepage = "https://debezium.io/"
+tags = ["documentation", "bootstrap", "light", "minimal", "clean", "simple", "fast", "modern", "white", "customizable", "creative", "flexbox","minimalistic","Highlight.js","typography", "docs", "material design", "highlighting", "contact form", "responsive", "Syntax highlighting", "Multilingual", "Single page", "Themefisher"]
+features = ["responsive","search autocomplete", "color scheme"]
+min_version = "0.64.0"
+
+[author]
+  name = "Debezium"
+  homepage = "https://debezium.io/"

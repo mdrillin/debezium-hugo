@@ -1,0 +1,7 @@
+---
+title: "Test"
+date: 2020-10-07T19:42:08+05:30
+draft: true
+---
+
+As you may have noticed, we have a https://debezium.io[new website] with link:/docs/[documentation], a link:/blog/[blog], and information about the link:/community/[Debezium community] and how you can link:/docs/contribute/[contribute]. Let us know what you think, and link:/docs/contribute/[contribute improvements].
