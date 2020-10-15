@@ -57,7 +57,6 @@ unsafe = true
   url = "blog"
   weight = 3
 
-
 [sitemap]
   changefreq = "monthly"
   priority = 0.5

@@ -1,0 +1,24 @@
+{{ partial "header.html" . }}
+<body>
+{{ partial "topbar.html" . }}
+<div class="container" id="content">
+    {{ partial "navbar.html" . }}
+    <div class="row">
+        <!-- Sidebar -->
+        <div class="col-md-3">
+            {{ partial "menu.html" . }}
+        </div>
+        <div class="col-md-9">
+            <div class="well well-sm">
+                <strong>{{ .Title }}</strong>
+                <ul class="list-unstyled">
+                    {{ range .Data.Pages }}
+                        {{ .Render "li" }}
+                    {{ end}}
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+{{ partial "footer.copyright.html" . }}
+{{ partial "footer.html" . }}

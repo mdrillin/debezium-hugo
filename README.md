@@ -10,7 +10,7 @@ This is the source code for the [Debezium website](https://debezium.io/). This i
 
 ## Prerequisites
 
-Ensure you have installed the [extended version of Hugo](https://github.com/gohugoio/hugo/releases). See installation steps from [Hugo's official docs](https://gohugo.io/getting-started/installing/) and [Asciidoctor official docs](https://asciidoctor.org/docs/install-toolchain/)
+Ensure you have installed the [extended version of Hugo](https://github.com/gohugoio/hugo/releases). See installation steps from [Hugo's official docs](https://gohugo.io/getting-started/installing/) and [Asciidoctor](https://asciidoctor.org/docs/install-toolchain/)
 
 
 
