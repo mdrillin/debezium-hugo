@@ -6944,7 +6944,7 @@ ul.icons-ul {
 }
 /* ------------------ Company Logo In TabZilla -------------------- */
 .rhlogo {
-  background-image: url('https://debezium.io/images/Logo-Red_Hat-Sponsored_By-B-Standard-RGB.svg');
+  background-image: url('/images/Logo-RedHat-A-Reverse-RGB.svg');
   margin-top: 9px;
   margin-right: 10px;
 }

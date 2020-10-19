@@ -1,0 +1,33 @@
+{{ partial "header.html" . }}
+<body>
+  {{ partial "topbar.html" . }}
+  <div class="container" id="content">
+    {{ partial "navbar.html" . }}
+    <div class="row">
+      <!-- Sidebar -->
+      <div class="col-md-3">{{ partial "menu.html" . }}</div>
+      <div class="col-md-9">
+        <h1 class="section full">{{ .Title }}</h1>
+        <h3 class="section">Series</h3>
+        <div class="row">
+          {{ partial "series-box.html" . }} {{ partial "series-box.html" . }}
+        </div>
+        <a
+          class="btn btn-default older-series collapsed"
+          data-toggle="collapse"
+          href="#older-series"
+        >
+          <span class="show-older">See older series</span>
+          <span class="hide-older">Hide older series</span>
+        </a>
+        <p></p>
+        <h3 class="section">Other Documentation</h3>
+        <p></p>
+        Make sure to check the <a href="/documentation/faq">FAQ</a>. You can also find quite a lot of valuable
+        insight about Debezium all across the web. We have compiled a list of
+        such articles <a href="/documentation/online-resources">here</a>.
+      </div>
+    </div>
+  </div>
+  {{ partial "footer.copyright.html" . }} {{ partial "footer.html" . }}
+</body>
