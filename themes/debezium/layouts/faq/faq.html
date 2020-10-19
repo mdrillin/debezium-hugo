@@ -1,0 +1,16 @@
+{{ partial "header.html" . }}
+<body>
+  {{ partial "topbar.html" . }}
+  <div class="container" id="content">
+    {{ partial "navbar.html" . }}
+    <div class="row">
+      <!-- Sidebar -->
+      <div class="col-md-3">{{ partial "menu.html" . }}</div>
+      <div class="col-md-9">
+        <h1 class="section full">Frequently Asked Questions</h1>
+        
+      </div>
+    </div>
+  </div>
+  {{ partial "footer.copyright.html" . }} {{ partial "footer.html" . }}
+</body>
