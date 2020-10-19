@@ -1,5 +1,6 @@
-= Resources on the Web
-:awestruct-layout: doc
+--- 
+title: Resources on the Web
+---
 :linkattrs:
 :icons: font
 :source-highlighter: highlight.js
