@@ -5,14 +5,12 @@
     {{ partial "navbar.html" . }}
     {{ if .IsHome }}
         {{ "<!-- banner -->" | safeHTML }}
-        <div>
         {{ partial "banner.html" . }}
-        </div>
-
+       <br>
+       <br>
+       <br>
         {{ "<!-- /Features -->" | safeHTML }}
-        <div class="features">
         {{ partial "features.html" . }}
-        </div>
     {{ end }}
 </div>
 {{ partial "footer.copyright.html" . }}
