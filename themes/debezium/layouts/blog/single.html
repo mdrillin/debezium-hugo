@@ -1,34 +1,68 @@
 {{ partial "header.html" . }}
 <body>
-    <div class="container">
+    {{ partial "topbar.html" . }}
+  <div class="container">
     {{ partial "navbar.html" . }}
-    <div class="row">
+    <div id="equalHeightsLayout">
+      <div class="row post-text-padding row-no-expand">
         <!-- Sidebar -->
-        <div class="col-md-3">
-            <div class="well well-sm"> <!-- Post-specific stats -->
-                <h4>{{ .Date.Format "January 2, 2006" }}<br>
-                <small>{{ .WordCount }} words</small></h4>
-                <hr>
-                <strong>Categories</strong>
-                <ul class="list-unstyled">
-                {{ range .Params.categories }}
-                    <li><a href="/categories/{{ . | urlize }}">{{ . }}</a></li>
-                {{ end }}
-                </ul>
-                <hr>
-                <strong>Tags</strong><br>
-                {{ range .Params.tags }}<a class="label label-default" href="/tags/{{ . | urlize }}">{{ . }}</a> {{ end }}
-            </div>
-            {{ partial "menu.html" . }}
-        </div>        
+        <div class="col-md-3">{{ partial "blog-menu.html" . }}</div>
         <div class="col-md-9">
-            <div class="well well-sm">
-                    <h3>{{ .Title }}<br> <small>{{ .Description }}</small></h3>
-                    <hr>
-                    {{ .Content }}
+          <div
+            class="row"
+            style="margin-left: 0; margin-right: 0; margin-bottom: 10px"
+          >
+            <div class="col-sm-12" style="padding-left: 0px">
+              <div style="display: table-cell; vertical-align: top">
+                <div
+                  style="
+                    width: 72px;
+                    border: 1px solid #ccc;
+                    padding: 3px;
+                    display: inline-block;
+                  "
+                >
+                  <img src="/images/gmorling.jpg" style="width: 64px" />
+                </div>
+              </div>
+              <div style="display: table-cell; vertical-align: top">
+                <div style="margin-left: 8px">
+                  <span
+                    class="hidden-sm hidden-xs"
+                    style="font-size: 2.75rem; line-height: 1"
+                  >
+                    <a href="{{ .Permalink }}">{{ .Title}}</a>
+                  </span>
+                  <span
+                    class="hidden-md hidden-lg"
+                    style="font-size: 2rem; line-height: 1"
+                  >
+                    <a href="{{ .Permalink }}">{{ .Title}}</a>
+                  </span>
+                  <div class="byline" style="line-height: 1">
+                    <em> {{ .Date.Format "January 2, 2006" }}</em>
+                    <div class="hidden-xs" style="margin-top: 5px">
+                      <a
+                        class="label label-info hidden-sm hidden-xs"
+                        href="/blog/tags/community/"
+                        >community</a
+                      >
+                      <a
+                        class="label label-info hidden-sm hidden-xs"
+                        href="/blog/tags/outbox/"
+                        >outbox</a
+                      >
+                    </div>
+                  </div>
+                </div>
+              </div>
             </div>
+          </div>
+          <hr />
+          {{ .Content }}
         </div>
+      </div>
     </div>
-</div>
-{{ partial "footer.copyright.html" . }}
-{{ partial "footer.html" . }}
+  </div>
+  {{ partial "footer.copyright.html" . }} {{ partial "footer.html" . }}
+</body>

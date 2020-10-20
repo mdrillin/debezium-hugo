@@ -1,24 +1,22 @@
 {{ partial "header.html" . }}
 <body>
-{{ partial "topbar.html" . }}
-<div class="container" id="content">
+  {{ partial "topbar.html" . }}
+  <div class="container" id="content">
     {{ partial "navbar.html" . }}
-    <div class="row">
+    <div id="equalHeightsLayout">
+      <div class="row post-text-padding row-no-expand">
         <!-- Sidebar -->
-        <div class="col-md-3">
-            {{ partial "menu.html" . }}
-        </div>
+        <div class="col-md-3">{{ partial "blog-menu.html" . }}</div>
         <div class="col-md-9">
-            <div class="well well-sm">
-                <strong>{{ .Title }}</strong>
-                <ul class="list-unstyled">
-                    {{ range .Data.Pages }}
-                        {{ .Render "li" }}
-                    {{ end}}
-                </ul>
-            </div>
+          <h1 class="section full">Debezium Blog</h1>
+
+          {{ range .Data.Pages }} 
+             {{ .Render "li" }} 
+          {{ end}}
         </div>
+      </div>
     </div>
-</div>
-{{ partial "footer.copyright.html" . }}
-{{ partial "footer.html" . }}
+  </div>
+  {{ partial "footer.copyright.html" . }} 
+  {{ partial "footer.html" . }}
+</body>
