@@ -1,4 +1,82 @@
-    <li>
-        <h5><a href="{{ .Permalink }}">{{ .Title}}</a><br>
-        <small>posted on {{ .Date.Format "January 2, 2006" }}</small></h5>
-    </li>
+<div class="post">
+  <div class="row" style="margin-left: 0; margin-right: 0; margin-bottom: 10px">
+    <div class="col-sm-12" style="padding-left: 0px">
+      <div style="display: table-cell; vertical-align: top">
+        <div
+          style="
+            width: 72px;
+            border: 1px solid #ccc;
+            padding: 3px;
+            display: inline-block;
+          "
+        >
+          <img src="/images/gmorling.jpg" style="width: 64px" />
+        </div>
+      </div>
+      <div style="display: table-cell; vertical-align: top">
+        <div style="margin-left: 8px">
+          <span
+            class="hidden-sm hidden-xs"
+            style="font-size: 2.75rem; line-height: 1"
+          >
+            <a href="{{ .Permalink }}">{{ .Title}}</a>
+          </span>
+          <span
+            class="hidden-md hidden-lg"
+            style="font-size: 2rem; line-height: 1"
+          >
+            <a href="{{ .Permalink }}">{{ .Title}}</a>
+          </span>
+          <div class="byline" style="line-height: 1">
+            <em> {{ .Date.Format "January 2, 2006" }}</em>
+            <div class="hidden-xs" style="margin-top: 5px">
+              <a
+                class="label label-info hidden-sm hidden-xs"
+                href="/blog/tags/community/"
+                >community</a
+              >
+              <a
+                class="label label-info hidden-sm hidden-xs"
+                href="/blog/tags/outbox/"
+                >outbox</a
+              >
+             
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="row" style="margin-left: 0; margin-right: 0">
+    <div
+      class="openblock teaser"
+      style="font-weight: 400; color: #656565; text-align: start"
+    >
+      <div class="content">
+        <div class="paragraph">
+          <p>
+            Welcome to the first edition of "Debezium Community Stories
+            With…&#8203;", a new series of interviews with members of the
+            Debezium and change data capture community, such as users,
+            contributors or integrators. We’re planning to publish more parts of
+            this series in a loose rhythm, so if you’d like to be part of it,
+            please let us know. In today’s edition it’s my pleasure to talk to
+            <a href="https://twitter.com/renatomefi">Renato Mefi</a>, a
+            long-time Debezium user and contributor.
+          </p>
+        </div>
+      </div>
+    </div>
+    <div class="read-more-div">
+      <a
+        class="read-more"
+        href="{{ .Permalink }}"
+      >
+        Read More&nbsp;&nbsp;&nbsp;&nbsp; <span class="icon-arrow-right"></span>
+      </a>
+    </div>
+  </div>
+</div>
+<div
+  style="border-bottom: 1px dashed #ccc; margin-top: 25px; margin-bottom: 15px"
+></div>

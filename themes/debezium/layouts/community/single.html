@@ -7,10 +7,11 @@
       <!-- Sidebar -->
       <div class="col-md-3">{{ partial "menu.html" . }}</div>
       <div class="col-md-9">
-        <h1 class="section full">Frequently Asked Questions</h1>
-        
+        <h1 class="section full">{{ .Title }}</h1>
+        {{ .Content }}
       </div>
     </div>
   </div>
-  {{ partial "footer.copyright.html" . }} {{ partial "footer.html" . }}
+  {{ partial "footer.copyright.html" . }} 
+  {{ partial "footer.html" . }}
 </body>

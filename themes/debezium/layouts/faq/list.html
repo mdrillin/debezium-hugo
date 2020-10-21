@@ -1,0 +1,20 @@
+{{ partial "header.html" . }}
+<body>
+  {{ partial "topbar.html" . }}
+  <div class="container">
+    {{ partial "navbar.html" . }}
+    <div id="equalHeightsLayout">
+      <div class="row post-text-padding row-no-expand">
+        <!-- Sidebar -->
+        <div class="col-md-3">{{ partial "menu.html" . }}</div>
+        <div class="col-md-9">
+          {{ range .Data.Pages }} 
+            {{ .Render "single" }} 
+          {{ end}}
+        </div>
+      </div>
+    </div>
+  </div>
+  {{ partial "footer.copyright.html" . }} 
+  {{ partial "footer.html" . }}
+</body>

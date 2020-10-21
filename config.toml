@@ -33,27 +33,27 @@ unsafe = true
 
   ################## english navigation #################
   [[Languages.en.menu.main]]
-  name = "Faq"
+  name = "FAQ"
   url = "faq"
   weight = 2
 
   [[Languages.en.menu.main]]
-  name = "Documentation"
+  name = "DOCUMENTATION"
   url = "documentation"
   weight = 3
 
   [[Languages.en.menu.main]]
-  name = "Releases"
+  name = "RELEASES"
   url = "releases"
   weight = 3
 
   [[Languages.en.menu.main]]
-  name = "Community"
+  name = "COMMUNITY"
   url = "community"
   weight = 3
 
   [[Languages.en.menu.main]]
-  name = "Blog"
+  name = "BLOG"
   url = "blog"
   weight = 3
 
